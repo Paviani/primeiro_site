@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o corpo da página */
+}
+.menu-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* faz o link ocupar todo o espaço do seu container */
+    padding: 20px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.menu-principal a:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.hero {
+    /* --- 1. Tamanho --- */
+    /* 90vh = 90% da altura da tela. Isso faz o hero quase preencher a tela */
+    min-height: 90vh; 
+
+    /* --- 2. A Imagem de Fundo (A "Receita de Bolo") --- */
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat; /* Para a imagem não se repetir */
+    background-size: cover;       /* Faz a imagem cobrir todo o espaço */
+    background-position: center;  /* Mantém o centro da imagem sempre visível */
+
+    /* --- 3. A MÁGICA DA CENTRALIZAÇÃO (FLEXBOX) --- */
+    /* Este é o "trio" para centralização perfeita: */
+    display: flex;             /* Ativa o Flexbox no "pai" */
+    justify-content: center; /* Centraliza o "filho" no eixo Horizontal */
+    align-items: center;     /* Centraliza o "filho" no eixo Vertical */
+    
+    color: white; /* Define a cor do texto padrão para branco */
+}
+
+/* Estilo da caixa de conteúdo */
+.hero-content {
+    text-align: center; /* Centraliza o texto DENTRO da caixa */
+    max-width: 600px; /* Impede que o texto fique largo demais em telas grandes */
+    
+    /* Efeito "Overlay": Fundo preto com 50% de transparência.
+       rgba(0, 0, 0, 0.5) = (Red, Green, Blue, Alpha/Opacidade)
+       Isso garante que o texto seja legível em cima de qualquer imagem.
+    */
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 40px;
+    border-radius: 8px; /* Cantos arredondados */
+}
+
+/* Estilo do Título Principal */
+.hero-content h1 {
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Estilo do Subtítulo */
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Estilo do Botão de Ação */
+.hero-button {
+    display: inline-block;
+    background-color: #3498db; /* O mesmo azul do hover do menu */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    
+    /* Efeito de transição suave */
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #2980b9; /* Azul um pouco mais escuro */
+}
+
+
+/* --- Estilos da Seção Features --- */
+
+.features-container {
+    /* 1. Ativa o Flexbox no container pai */
+    display: flex; 
+
+    /* 2. (NOVA PROPRIEDADE!) O 'gap' é a forma moderna de
+       adicionar um "vão" (espaçamento) de 20px ENTRE
+       cada um dos itens filhos. É muito mais fácil que usar margin! */
+    gap: 20px;
+
+    /* 3. Apenas para dar um respiro geral na seção */
+    padding: 60px 40px;
+    background-color: #f4f4f4; /* Um cinza claro para diferenciar do Hero */
+}
+
+.feature-card {
+    /* 1. (REFORÇO!) Diz ao item: "Ocupe 1 parte igual
+       do espaço disponível". Como temos 3 itens,
+       o espaço será dividido em 3 partes iguais. */
+    flex: 1; 
+
+    /* 2. Estilizando o card (Box Model!) */
+    background-color: white;
+    padding: 60px;
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Uma sombra leve */
+}
+
+.feature-card:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.253); /* Sombra um pouco maior ao passar o mouse */
+    transform: translateY(-5px); /* Leve elevação vertical ao passar o mouse */
+    /* transform: translateX(-5px); Leve elevação horizontal ao passar o mouse */
+    transition: all 0.3s ease; /* Transição suave para o efeito hover */
+}
+
+.feature-card h3 {
+    font-size: 30px;
+    color: #333;
+    margin-top: 0;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
