@@ -193,3 +193,56 @@ body {
     padding: 80px 60px;
     background-color: #f9f9f9; /* Um fundo levemente cinza para separar da seção branca */
 }
+
+.contato-form {
+    flex: 1; /* Ocupa 50% */
+    padding-right: 50px; /* Espaço entre o formulário e a imagem */
+}
+
+.contato-img {
+    flex: 1; /* Ocupa 50% */
+}
+
+/* Garante que a imagem seja responsiva */
+.contato-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borda arredondada na imagem fica elegante */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Uma sombra suave */
+}
+
+/* Estilo dos Rótulos (Labels) */
+form label {
+    display: block; /* Faz o label ficar em uma linha própria */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo dos Campos (Inputs e Textarea) */
+form input, 
+form textarea {
+    width: 100%; /* Ocupa toda a largura da coluna */
+    padding: 15px; /* Espaço interno confortável para digitar */
+    margin-bottom: 20px; /* Espaço até o próximo campo */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* Herda a fonte do site */
+    background-color: white;
+}
+
+/* Efeito ao clicar no campo (Foco) */
+form input:focus, 
+form textarea:focus {
+    outline: none;
+    border-color: #3498db; /* Muda a borda para azul quando selecionado */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Reutilizando o botão que criamos na aula anterior, mas garantindo que não tenha text-decoration */
+button.cta-button {
+    border: none;
+    cursor: pointer;
+    width: 100%; /* Botão largura total */
+    font-size: 16px;
+}
