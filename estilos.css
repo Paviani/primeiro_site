@@ -249,7 +249,7 @@ button.contato-button {
     text-decoration: none; /* Remove o sublinhado do link */
     font-weight: bold; /* Texto em negrito */
     border-radius: 5px; /* Cantos levemente arredondados */
-    font-size: 18px; /* Tamanho da fonte do botão */
+    font-size: 18px; /* Tamanho da fonte do botão */;
     
     /* Efeito de transição suave para a mudança de cor */
     transition: background-color 0.3s ease; /* Anima a mudança da cor de fundo em 0.3 segundos */
