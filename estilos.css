@@ -183,3 +183,13 @@ body {
    display: block;          /* tira espaço embaixo da imagem */
    border-radius: 15px 15px 15px 15px; /* arredonda     /* opcional, só pra ficar bonitinho */
 }
+
+/* --- Seção de Contato --- */
+
+.contato {
+    display: flex; /* Coloca lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Separa as colunas */
+    padding: 80px 60px;
+    background-color: #f9f9f9; /* Um fundo levemente cinza para separar da seção branca */
+}
