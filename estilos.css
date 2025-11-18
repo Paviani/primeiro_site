@@ -155,3 +155,31 @@ body {
     color: #666; /* Cinza um pouco mais claro para o texto */
     line-height: 1.6; /* Altura da linha para melhor legibilidade (1.6 vezes o tamanho da fonte) */
 }
+
+/* --- Estilos da Seção Sobre Nós --- */
+
+.sobre-nos {
+   display: flex;
+   align-items: center;     /* alinha imagem e texto pelo meio */
+   gap: 40px;
+   padding: 60px 40px;
+}
+
+.sobre-imagem {
+   padding-left: 50px;    /*  espaço entre a imagem e a borda esquerda */
+   flex: 1;                /* divide em 2 colunas iguais */
+}
+
+.sobre-texto {
+   flex: 1;                 /* divide em 2 colunas iguais */
+}
+
+.sobre-texto {
+   padding-right: 10px;  /* espaço entre o texto e a borda direita */
+}
+
+.sobre-imagem img {
+   max-width: 80%;         /* imagem nunca passa do limite da coluna */
+   display: block;          /* tira espaço embaixo da imagem */
+   border-radius: 15px 15px 15px 15px; /* arredonda     /* opcional, só pra ficar bonitinho */
+}
