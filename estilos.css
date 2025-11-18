@@ -197,6 +197,8 @@ body {
 .contato-form {
     flex: 1; /* Ocupa 50% */
     padding-right: 50px; /* Espaço entre o formulário e a imagem */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 .contato-img {
@@ -240,9 +242,16 @@ form textarea:focus {
 }
 
 /* Reutilizando o botão que criamos na aula anterior, mas garantindo que não tenha text-decoration */
-button.cta-button {
-    border: none;
-    cursor: pointer;
-    width: 100%; /* Botão largura total */
-    font-size: 16px;
+button.contato-button {
+    display: inline-block; /* Permite definir padding e margin, mas se comporta como um item de linha */
+    background-color: #0f354e; /* O mesmo azul do hover do menu, para consistência */
+    color: white; /* Cor do texto do botão */
+    padding: 15px 30px; /* Preenchimento interno para criar um botão "gordinho" */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-weight: bold; /* Texto em negrito */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    font-size: 18px; /* Tamanho da fonte do botão */
+    
+    /* Efeito de transição suave para a mudança de cor */
+    transition: background-color 0.3s ease; /* Anima a mudança da cor de fundo em 0.3 segundos */
 }
