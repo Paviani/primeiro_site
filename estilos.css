@@ -24,7 +24,7 @@ body {
     padding: 20px 25px; /* Adiciona preenchimento interno (20px em cima/baixo, 25px nos lados) */
     font-weight: bold; /* Deixa o texto em negrito */
     text-transform: uppercase; /* Transforma todo o texto para maiúsculas */
-    font-size: 17px; /* Define o tamanho da fonte */
+    font-size: 18px; /* Define o tamanho da fonte */
 }
 
 /* Efeito ao passar o mouse sobre o link do menu */
