@@ -1,3 +1,15 @@
+:root {
+    /* Aqui definimos os "apelidos" das cores */
+    --cor-destaque: #3498db; /* Azul principal */
+    --cor-texto: #333333;    /* Cor escura para textos */
+    --cor-fundo: #f4f4f4;    /* Cor de fundo suave */
+    --cor-branca: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0; /* Remove a margem padrão do navegador para o corpo da página */
     font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o corpo da página */
@@ -19,7 +31,7 @@ body {
 
 .menu-principal a {
     text-decoration: none; /* Remove o sublinhado padrão dos links */
-    color: #333; /* Define a cor do texto dos links */
+    color: var(--cor-texto); /* Define a cor do texto dos links */
     display: block; /* Faz o link ocupar todo o espaço do seu contêiner (li) */
     padding: 20px 25px; /* Adiciona preenchimento interno (20px em cima/baixo, 25px nos lados) */
     font-weight: bold; /* Deixa o texto em negrito */
@@ -29,8 +41,8 @@ body {
 
 /* Efeito ao passar o mouse sobre o link do menu */
 .menu-principal a:hover {
-    background-color: #3498db; /* Muda a cor de fundo ao passar o mouse */
-    color: white; /* Muda a cor do texto para branco */
+    background-color: var(--cor-destaque); /* Muda a cor de fundo ao passar o mouse */
+    color: var(--cor-branca); /* Muda a cor do texto para branco */
 }
 
 /* --- Estilos da Seção Hero (Banner Principal) --- */
@@ -52,7 +64,7 @@ body {
     justify-content: center; /* Centraliza o "filho" no eixo Horizontal */
     align-items: center;     /* Centraliza o "filho" no eixo Vertical */
     
-    color: white; /* Define a cor do texto padrão para branco (para os elementos filhos) */
+    color: var(--cor-branca); /* Define a cor do texto padrão para branco (para os elementos filhos) */
 }
 
 /* Estilo da caixa de conteúdo dentro do Hero */
@@ -85,8 +97,8 @@ body {
 /* Estilo do Botão de Ação (Call to Action) */
 .hero-button {
     display: inline-block; /* Permite definir padding e margin, mas se comporta como um item de linha */
-    background-color: #3498db; /* O mesmo azul do hover do menu, para consistência */
-    color: white; /* Cor do texto do botão */
+    background-color: var(--cor-destaque); /* O mesmo azul do hover do menu, para consistência */
+    color: var(--cor-branca); /* Cor do texto do botão */
     padding: 15px 30px; /* Preenchimento interno para criar um botão "gordinho" */
     text-decoration: none; /* Remove o sublinhado do link */
     font-weight: bold; /* Texto em negrito */
@@ -116,7 +128,7 @@ body {
 
     /* 3. Apenas para dar um respiro geral na seção */
     padding: 60px 40px; /* Preenchimento interno da seção (60px em cima/baixo, 40px nos lados) */
-    background-color: #f4f4f4; /* Um cinza claro para diferenciar do Hero e do rodapé */
+    background-color: var(--cor-fundo); /* Um cinza claro para diferenciar do Hero e do rodapé */
 }
 
 /* Estilo de cada Card de Característica */
@@ -127,7 +139,7 @@ body {
     flex: 1; 
 
     /* 2. Estilizando o card (Box Model!) */
-    background-color: white; /* Fundo branco para o card */
+    background-color: var(--cor-branca); /* Fundo branco para o card */
     padding: 30px; /* Preenchimento interno do card */
     border-radius: 8px; /* Cantos arredondados */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Uma sombra leve para dar profundidade */
@@ -144,7 +156,7 @@ body {
 /* Estilo do título dentro do card */
 .feature-card h3 {
     font-size: 24px; /* Tamanho da fonte para o título do card */
-    color: #333; /* Cor escura para o texto */
+    color: var(--cor-texto); /* Cor escura para o texto */
     margin-top: 0; /* Remove margem superior */
     margin-bottom: 15px; /* Espaço abaixo do título */
 }
@@ -184,7 +196,7 @@ body {
    border-radius: 15px 15px 15px 15px; /* arredonda     /* opcional, só pra ficar bonitinho */
 }
 
-/* --- Seção de Contato do nosso site--- */
+/* --- Seção de Contato --- */
 
 .contato {
     display: flex; /* Coloca lado a lado */
@@ -217,7 +229,7 @@ form label {
     display: block; /* Faz o label ficar em uma linha própria */
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: var(--cor-texto);
 }
 
 /* Estilo dos Campos (Inputs e Textarea) */
@@ -229,14 +241,14 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: inherit; /* Herda a fonte do site */
-    background-color: white;
+    background-color: var(--cor-branca);
 }
 
 /* Efeito ao clicar no campo (Foco) */
 form input:focus, 
 form textarea:focus {
     outline: none;
-    border-color: #3498db; /* Muda a borda para azul quando selecionado */
+    border-color: var(--cor-destaque); /* Muda a borda para azul quando selecionado */
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
 }
 
@@ -244,7 +256,7 @@ form textarea:focus {
 button.contato-button {
     display: inline-block; /* Permite definir padding e margin, mas se comporta como um item de linha */
     background-color: #0f354e; /* O mesmo azul do hover do menu, para consistência */
-    color: white; /* Cor do texto do botão */
+    color: var(--cor-branca); /* Cor do texto do botão */
     padding: 15px 30px; /* Preenchimento interno para criar um botão "gordinho" */
     text-decoration: none; /* Remove o sublinhado do link */
     font-weight: bold; /* Texto em negrito */
@@ -253,4 +265,13 @@ button.contato-button {
     
     /* Efeito de transição suave para a mudança de cor */
     transition: background-color 0.3s ease; /* Anima a mudança da cor de fundo em 0.3 segundos */
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--cor-texto); /* Usando a variável de cor escura */
+    color: var(--cor-branca);           /* Usando a variável de cor branca */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
