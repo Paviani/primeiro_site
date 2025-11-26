@@ -249,7 +249,7 @@ form input:focus,
 form textarea:focus {
     outline: none;
     border-color: var(--cor-destaque); /* Muda a borda para azul quando selecionado */
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
 }
 
 /* Reutilizando o botão que criamos na aula anterior, mas garantindo que não tenha text-decoration */
