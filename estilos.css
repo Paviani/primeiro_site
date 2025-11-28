@@ -281,7 +281,13 @@ footer {
 
 /* --- RESPONSIVIDADE (Versão Mobile) --- */
 @media (max-width: 768px) {
-      /* 1. Ajustando o Hero Section */
+    html, body {
+        overflow-x: hidden; /* Evita barra de rolagem horizontal no mobile */
+        width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+        position: relative; /* Evita problemas de posicionamento absoluto */
+    } 
+    
+    /* 1. Ajustando o Hero Section */
     .hero {
         /* A mágica: muda de linha para coluna */
         flex-direction: column;
@@ -295,12 +301,7 @@ footer {
 
       /* 2. Ajustando o Menu para Mobile */
     
-    /* Primeiro, garantimos que o botão do script (se existir) não apareça */
-    .menu-toggle {
-        display: none !important; 
-    }
-
-    /* Agora, transformamos a lista horizontal em vertical */
+     /* Vamos transformar a lista horizontal em vertical */
     .menu-principal ul {
         flex-direction: column; /* Empilha os links um embaixo do outro */
         width: 100%; /* Ocupa a largura toda */
